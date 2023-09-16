@@ -56,5 +56,13 @@ header .mobile {
         display: block;
         width: 100%;
     }
-    
+    header .mobile ul {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    header .mobile .logo {
+        display: flex;
+        align-items: center;
+    }
 }
