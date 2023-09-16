@@ -1,231 +1,60 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
 html {
-    font-size: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
 }
 
-body {
-    background-color: white;
+a {
+    text-decoration: none;
+    color: inherit;
 }
+
+strong {
+    font-weight: bold;
+}
+
+/*** Header Section ***/
 
 header {
+    padding: 1rem 1.5rem;
+}
+
+header .logo {
+    flex-grow: 1;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    position: fixed;
-    background-color: white;
-    height: 6.4rem;
-    width: 100%;
-    z-index: 1;
 }
 
-.logo {
-    height: 6.4rem;
-    display: inline-flex;
-    align-content: center;
-}
-
-.logo h1 {
-    font-size: 2.3rem;
-    text-transform: uppercase;
-    color: grey;
-    font-weight: 500;
-    margin: auto 0;
-}
-
-.colmar {
-    font-weight: bolder;
-    color: dimgray;
-}
-
-.logo img {
-    padding-left: 2.4rem;
-    width: 4rem;
-}
-
-.navigation ul {
+header .desktop {
     display: flex;
-    margin-right: 2.4rem;
+    align-items: center;
 }
 
-.navigation ul li {
-    list-style-type: none;
-    margin-left: 1.6rem;
-}
+/*** Navigation Section ***/
 
-.navigation ul li a {
-    text-decoration: none;
-    color: grey;
-    font-size: 1.8rem;
-    transition: color 200ms linear;
-}
-
-.navigation ul li a:hover {
-    color: black;
-}
-
-/*** MAIN SECTION ***/
-
-main {
-    position: relative;
-    top: 6.4rem;
-}
-
-.partone {
-    background-color: grey;
+header nav ul {
     display: flex;
-    justify-content: flex-start;
 }
 
-.banner {
-    width: 60%;
-    overflow: hidden;
-    padding: 3.2rem 2.4rem;
+header nav ul li {
+    padding-right: 1rem;
 }
 
-.banner img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+header .desktop nav ul li:last-child {
+    padding-right : 0;
 }
 
-.textbanner {
-    width: 25%;
-    text-align: left;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
+header .mobile {
+    display: none;
 }
 
-.textbanner h1 {
-    font-size: 5rem;
-    padding-bottom: 2rem;
-}
+/*** Mobile Header Section ***/
 
-.textbanner h2 {
-    font-size: 3rem;
-    padding-bottom: 3rem;
-}
-
-.textbanner .button {
-    text-align: center;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    width: 90%;
-    display: block;
-    background-color: darkslategrey;
-}
-
-.button h3 {
-    font-size: 3rem;
-    font-weight: 500;
-    color: white;
-}
-
-.parttwo {
-    display: flex;
-    width: 100%;
-}
-
-.parttwo .left {
-    width: 60%;
-    overflow: hidden;
-    padding: 3.2rem 2.4rem;
-    border-right: 1px solid grey;
-}
-
-.parttwo .left img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-.left h1 {
-    font-size: 4rem;
-    margin-top: 3.2rem;
-    margin-bottom: 2.4rem;
-}
-
-.left p {
-    font-size: 2rem;
-    margin-bottom: 3.2rem;
-}
-
-.left h6 {
-    font-size: 2rem;
-    font-weight: 550;
-}
-
-.parttwo .right {
-    width: 40%;
-    display: flex;
-    flex-flow: column wrap;
-    padding-left: 1.6rem;
-    padding: 0;
-}
-
-.right .box {
-    display: flex;
-    padding: 1.6rem;
-    transition: background-color 200ms linear;
-}
-
-.right .box .photo {
-    width: 35%;
-    height: auto;
-    overflow: hidden;
-}
-
-.photo img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-.righttext {
-    width: 65%;
-    color: black;
-    text-align: left;
-    padding-left: 1.6rem;
-}
-
-.righttext h3 {
-    font-size: 3rem;
-}
-
-.righttext h5 {
-    font-size: 2rem;
-    line-height: 1.8;
-}
-
-#bottomline {
-    border-bottom: 1px solid grey;
-}
-
-#bothline {
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
-}
-
-.box:hover {
-    background-color: grey;
-}
-
-/*** PART THREE ***/
-
-.partthree {
-    display: flex;
-    flex-flow: column wrap;
-    background-color: grey;
-}
-
-.headerthree {
-    width: 100%;
-    text-align: center;
-    font-size: 3.5rem;
-    padding: 3.2rem 0;
+@media only screen and (max-width: 580px) {
+    header .desktop {
+        display: none;
+    }
+    header .mobile {
+        display: block;
+        width: 100%;
+    }
+    
 }
