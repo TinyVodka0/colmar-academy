@@ -61,6 +61,11 @@ header {
     text-decoration: none;
     color: grey;
     font-size: 1.8rem;
+    transition: color 200ms linear;
+}
+
+.navigation ul li a:hover {
+    color: black;
 }
 
 /*** MAIN SECTION ***/
@@ -119,4 +124,108 @@ main {
     font-size: 3rem;
     font-weight: 500;
     color: white;
+}
+
+.parttwo {
+    display: flex;
+    width: 100%;
+}
+
+.parttwo .left {
+    width: 60%;
+    overflow: hidden;
+    padding: 3.2rem 2.4rem;
+    border-right: 1px solid grey;
+}
+
+.parttwo .left img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.left h1 {
+    font-size: 4rem;
+    margin-top: 3.2rem;
+    margin-bottom: 2.4rem;
+}
+
+.left p {
+    font-size: 2rem;
+    margin-bottom: 3.2rem;
+}
+
+.left h6 {
+    font-size: 2rem;
+    font-weight: 550;
+}
+
+.parttwo .right {
+    width: 40%;
+    display: flex;
+    flex-flow: column wrap;
+    padding-left: 1.6rem;
+    padding: 0;
+}
+
+.right .box {
+    display: flex;
+    padding: 1.6rem;
+    transition: background-color 200ms linear;
+}
+
+.right .box .photo {
+    width: 35%;
+    height: auto;
+    overflow: hidden;
+}
+
+.photo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.righttext {
+    width: 65%;
+    color: black;
+    text-align: left;
+    padding-left: 1.6rem;
+}
+
+.righttext h3 {
+    font-size: 3rem;
+}
+
+.righttext h5 {
+    font-size: 2rem;
+    line-height: 1.8;
+}
+
+#bottomline {
+    border-bottom: 1px solid grey;
+}
+
+#bothline {
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+.box:hover {
+    background-color: grey;
+}
+
+/*** PART THREE ***/
+
+.partthree {
+    display: flex;
+    flex-flow: column wrap;
+    background-color: grey;
+}
+
+.headerthree {
+    width: 100%;
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 3.2rem 0;
 }
