@@ -11,6 +11,76 @@ strong {
     font-weight: bold;
 }
 
+h2 {
+    padding-bottom: 1rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-weight: bold;
+  }
+
+/*** Media Content ***/
+
+.media-container img {
+    max-width: 100%;
+    display: block;
+}
+
+.side-media {
+    width: 35%;
+    height: auto;
+    overflow: hidden;
+}
+
+.side-media img {
+    max-width: 100%;
+    display: block;
+}
+
+/*** Flex Content ***/
+
+.flex-content {
+    display: flex;
+    align-content: center;
+    padding: 2rem 1.5rem;
+}
+
+.flex-content .main-content {
+    width: 60%;
+    overflow: hidden;
+}
+
+.flex-content .supporting-content {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 0 2rem;
+}
+
+.flex-content .info-main {
+    width: 60%;
+    flex-direction: column;
+}
+
+.flex-content .info-side {
+    flex-direction: column;
+    width: 40%;
+}
+
+.flex-side {
+    display: flex;
+}
+
+.flex-side .info-side-supporting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 65%;
+}
+
 /*** Header Section ***/
 
 header {
@@ -48,7 +118,7 @@ header .mobile {
 
 /*** Mobile Header Section ***/
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 550px) {
     header .desktop {
         display: none;
     }
@@ -58,11 +128,158 @@ header .mobile {
     }
     header .mobile ul {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-content: center;
     }
-    header .mobile .logo {
-        display: flex;
-        align-items: center;
+    .logo {
+        justify-content: center;
+    }
+    .logo span {
+        display: none;
     }
 }
+
+/*** Banner Section ***/
+
+#banner {
+    background-color: rgb(219, 219, 219);
+}
+
+#banner .supporting-content{
+    justify-content: center;
+}
+
+.supporting-content h3 {
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+.supporting-content p {
+    padding-bottom: 2rem;
+}
+
+#banner a {
+    color: white;
+    text-align: center;
+    background-color: rgb(155, 155, 155);
+    padding: .5rem 0;
+}
+
+.main-content {
+    border-right: none;
+}
+
+/*** Mobile Banner ***/
+
+@media only screen and (max-width: 590px) {
+    #banner {
+        flex-direction: column;
+    }
+
+    .flex-content {
+        padding: 0;
+    }
+    .flex-content .main-content {
+        width: auto;
+        padding: 0;
+    }
+    .flex-content .supporting-content {
+        width: auto;
+        padding: 0;
+    }
+    #banner h3 {
+        padding: 2rem 1rem;
+    }
+    #banner p {
+        padding-left: 1rem;
+        padding-bottom: 1.5rem;
+    }
+    #banner a {
+        margin: 0 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/*** Information Section ***/
+
+#information h3 {
+    padding: 2rem 0 1.5rem 0;
+    font-size: 2rem;
+}
+
+#side-info {
+    border-bottom: 1px double grey;
+    padding-left: 1.5rem;
+}
+
+.info-side {
+    border-left: 1px solid grey;
+    margin-left: 2rem;
+}
+
+#information {
+    padding: 0;
+}
+
+#information .info-main {
+    padding: 2rem 1.5rem;
+}
+
+.flex-content .info-side {
+    padding: 0;
+}
+
+#side-info:first-child {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+#side-info:last-child,
+#side-info:nth-child(2) {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.info-side-supporting {
+    padding-left: 1.5rem;
+}
+
+#information .info-side-supporting h3 {
+    padding: 0;
+}
+
+#information .info-side-supporting p {
+    padding: 0.5rem 0;
+}
+
+#information .info-side-supporting a {
+    color: blue;
+}
+
+div#side-info.flex-side {
+    transition: background-color 200ms linear;
+}
+
+div#side-info.flex-side:hover {
+    background-color: rgb(155, 155, 155);
+}
+
+.author {
+    margin-top: 1.5rem;
+}
+
+/*** Mobile Information Section ***/
+
+@media only screen and (max-width: 580px) {
+    #information .info-main {
+        display: none;
+    }
+    #side-info,
+    #side-info:first-child,
+    #side-info:nth-child(2),
+    #side-info:last-child {
+        padding: 0;
+    }
+    .side-media {
+        width: auto;
+    }
